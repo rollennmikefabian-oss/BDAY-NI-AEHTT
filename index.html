@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3ebfa">
+  <meta name="color-scheme" content="light">
+  <title>Just for Princess Althea | A Birthday Letter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <div class="outer-label" aria-hidden="true"><span>A birthday keepsake</span><span class="line">made just for you</span></div>
+
+    <!-- SCREEN 1: PRIVATE BIRTHDAY LOGIN -->
+    <section class="stage active" id="login-stage" aria-label="Birthday invitation login">
+      <div class="portal">
+        <div class="welcome">
+          <div>
+            <p class="eyebrow">a little something lovely</p>
+            <h1>For a girl who deserves <em>the sweetest day.</em></h1>
+            <p class="welcome-copy">A tiny birthday surprise, wrapped in lavender and made with love.</p>
+          </div>
+          <div class="postcard" aria-hidden="true">
+            <div class="postcard-base"></div><div class="postcard-border"></div><div class="postcard-stamp">♡</div>
+            <svg class="lavender-sprig" viewBox="0 0 140 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M67 158C79 118 87 76 79 12M68 152C53 122 40 98 30 67M74 136C96 115 109 96 110 78" stroke="#799570" stroke-width="2.2" stroke-linecap="round"/>
+              <g fill="#ab86c9">
+                <ellipse cx="72" cy="27" rx="7" ry="11" transform="rotate(-28 72 27)"/>
+                <ellipse cx="85" cy="34" rx="7" ry="11" transform="rotate(23 85 34)"/>
+                <ellipse cx="72" cy="47" rx="8" ry="11" transform="rotate(-25 72 47)"/>
+                <ellipse cx="87" cy="55" rx="7" ry="12" transform="rotate(26 87 55)"/>
+                <ellipse cx="75" cy="68" rx="8" ry="11" transform="rotate(-28 75 68)"/>
+                <ellipse cx="87" cy="77" rx="7" ry="11" transform="rotate(25 87 77)"/>
+              </g>
+              <g fill="#c3a3de">
+                <ellipse cx="22" cy="72" rx="7" ry="11" transform="rotate(-40 22 72)"/>
+                <ellipse cx="35" cy="80" rx="8" ry="11" transform="rotate(25 35 80)"/>
+                <ellipse cx="29" cy="94" rx="8" ry="11" transform="rotate(-31 29 94)"/>
+                <ellipse cx="46" cy="104" rx="7" ry="10" transform="rotate(31 46 104)"/>
+                <ellipse cx="104" cy="80" rx="7" ry="10" transform="rotate(-26 104 80)"/>
+                <ellipse cx="115" cy="91" rx="7" ry="10" transform="rotate(31 115 91)"/>
+                <ellipse cx="94" cy="99" rx="7" ry="11" transform="rotate(-26 94 99)"/>
+              </g>
+              <path d="M72 137c-14-1-20-9-26-21 14 1 22 7 26 21ZM75 123c13-9 24-10 30-9-9 13-20 13-30 9Z" fill="#b0bda0"/>
+            </svg>
+            <div class="postcard-writing"><span>special delivery</span><strong>To: Princess Althea</strong></div>
+          </div>
+          <p class="welcome-footer">just one little click away</p>
+        </div>
+        <div class="login-panel">
+          <div class="login-content">
+            <p class="eyebrow">private invitation</p>
+            <h2>Your surprise is waiting.</h2>
+            <div class="mini-rule"></div>
+            <p class="description">Only the birthday girl can enter. Type in your special details to open what's inside.</p>
+            <form id="login-form" novalidate>
+              <div class="form-group"><label for="username">Username</label><input id="username" name="username" type="text" placeholder="Enter username" autocomplete="off" required></div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <div class="password-field">
+                  <input id="password" name="password" type="password" placeholder="Enter password" autocomplete="off" required>
+                  <button id="toggle-password" class="password-toggle" type="button" aria-label="Show password" aria-pressed="false" aria-controls="password">Show</button>
+                </div>
+              </div>
+              <button class="primary-button wide" type="submit">Enter your surprise <span class="arrow" aria-hidden="true">→</span></button>
+              <p id="login-error" class="error" role="status" aria-live="polite"></p>
+            </form>
+            <p class="fineprint">a little note, from someone who cares ♡</p>
+            <noscript><p class="noscript">Please open this file in a web browser with JavaScript enabled to see the birthday surprise.</p></noscript>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN 2: ENVELOPE -->
+    <section class="stage" id="envelope-stage" aria-label="Your birthday envelope" hidden>
+      <div class="interior">
+        <p class="eyebrow">special delivery · just for you</p>
+        <h2 class="scene-heading">You've got a little <em>letter.</em></h2>
+        <p class="scene-subtitle">Dear Aeht, someone has a few things they'd love to tell you today.</p>
+        <div class="envelope-scene">
+          <button class="envelope-hit" type="button" id="envelope" aria-label="Open Princess Althea's birthday letter">
+            <span class="envelope-back"></span>
+            <span class="envelope-note"><span>with love, always</span><strong>For you ♡</strong></span>
+            <span class="envelope-flap"></span>
+            <span class="envelope-front"></span>
+            <span class="envelope-front-bottom"></span>
+            <span class="seal">♡</span>
+          </button>
+        </div>
+        <p class="little-caption">sealed with love</p>
+        <button class="primary-button" type="button" id="open-button">Open your letter <span class="arrow" aria-hidden="true">→</span></button>
+      </div>
+    </section>
+
+    <!-- SCREEN 3: PERSONAL BIRTHDAY LETTER -->
+    <section class="stage" id="letter-stage" aria-label="Birthday letter" hidden>
+      <div class="letter-frame">
+        <p class="eyebrow">a celebration of you</p>
+        <h2 class="letter-title">Happy Birthday, <em>Princess Althea.</em></h2>
+        <p class="letter-sub">Mga alaalang simple noon, ngunit mahalaga pa rin hanggang ngayon. ♡</p>
+        <article class="letter-paper" lang="fil">
+          <p class="paper-meta">isang liham na para lamang sa iyo</p>
+          <h3>Dear Aeht,</h3>
+          <p>Maligayang kaarawan!</p>
+          <p>Nakakatuwang isipin na mula sa pagiging magkaklase noong Grade 8, sa hindi inaasahang pagkakaibigang nabuo noong Grade 10, hanggang sa muli nating pagsasama noong senior high school, ang dami na pala nating pinagdaanan. Sino nga bang mag-aakalang sa gitna ng mga gulo at hindi pagkakaunawaan noon, isa sa pinakamagandang alaala ang mabubuo—ang pagkakaibigan natin?</p>
+          <p>Mula sa pagiging magkatabi sa klase, walang katapusang kuwentuhan, pagtutulungan sa mga gawain, hanggang sa mga tsokolateng dala mo tuwing may paligsahan ako—lahat ng iyon ay maliliit na bagay na nag-iwan ng malaking puwang sa aking mga alaala. Salamat sa pagiging kaibigang maaasahan at sa walang sawang paniniwala sa aking kakayahan.</p>
+          <p>Ngayong magkaiba na ang landas natin, hanga ako sa tapang mong magpatuloy, kahit hindi lahat ay naaayon sa plano. Sana matagpuan mo ang mga pagkakataong magdadala sa iyo ng tunay na kaligayahan at tagumpay. At sa bawat pagkakataong muli tayong magkakasama, sana unti-unti na nating nakikita ang katuparan ng mga pangarap natin—hanggang sa dumating ang araw na masasabi nating, “Ang layo na pala ng narating natin.”</p>
+          <p>Salamat sa lahat, Aeht. Masaya akong naging bahagi ka ng buhay ko, at higit akong nagpapasalamat na naging bahagi ako ng sa iyo.</p>
+          <p>Maligayang kaarawan! 💜</p>
+          <p class="signature">From Miki Minajj</p>
+        </article>
+        <div class="letter-choices">
+          <button class="primary-button" id="more-confetti" type="button">Celebrate again ♡</button>
+          <button class="secondary-button" id="reopen-envelope" type="button">See the envelope again</button>
+        </div>
+        <p class="birthday-foot">made for a day worth celebrating</p>
+      </div>
+    </section>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>
